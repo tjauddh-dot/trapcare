@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배수구트랩설치</title>
+    <meta name="description" content="배수구트랩설치 전문. 서울 인천 경기 배수구트랩설치 P트랩 U트랩 냄새차단 역류방지 당일설치. 배수구트랩설치 24시간 긴급출동.">
+    <meta name="keywords" content="배수구트랩설치,트랩설치,P트랩설치,U트랩설치,배수구냄새,역류방지,하수구트랩,배관트랩,트랩교체">
+    <link rel="canonical" href="https://trapcare.netlify.app">
+    <meta property="og:title" content="배수구트랩설치">
+    <meta property="og:description" content="배수구트랩설치 전문. P트랩 U트랩 냄새차단 역류방지 당일설치. 24시간 긴급출동.">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"배수구트랩설치 전문","description":"서울 인천 경기 배수구트랩설치 전문. P트랩 U트랩 냄새차단 역류방지 당일설치.","telephone":"0504-1362-8100","areaServed":"서울,인천,경기","serviceType":"배수구트랩설치,트랩교체,배관수리"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"배수구트랩설치 비용이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"배수구트랩설치 비용은 트랩 종류와 설치 위치에 따라 다릅니다. 현장 확인 후 정확한 견적을 안내드립니다."}},
+        {"@type":"Question","name":"배수구트랩설치 당일 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 배수구트랩설치 24시간 당일 설치 가능합니다. 서울 인천 경기 30분 내 출동합니다."}},
+        {"@type":"Question","name":"배수구트랩설치 왜 필요한가요?","acceptedAnswer":{"@type":"Answer","text":"배수구트랩설치는 하수구 냄새 역류 차단, 해충 침입 방지, 역류 방지 효과가 있습니다. 트랩이 없거나 파손된 경우 즉시 설치가 필요합니다."}}
+    ]}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:#fff;color:#111;overflow-x:hidden}
+
+        .mob-cta{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(135deg,#0f766e,#0d9488);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(15,118,110,.4)}
+        .mob-cta .txt strong{color:#fff;font-size:.9em;display:block;font-weight:900}
+        .mob-cta .txt span{color:rgba(255,255,255,.75);font-size:.76em}
+        .mob-cta a{background:#ccfbf1;color:#0f766e;padding:11px 24px;border-radius:50px;font-weight:900;font-size:.98em;text-decoration:none;white-space:nowrap}
+        .mb-pad{height:62px}
+
+        .top-bar{background:#134e4a;padding:10px 20px;text-align:center;font-size:.83em;color:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+        .top-bar strong{color:#5eead4}
+        .top-bar a{color:#99f6e4;font-weight:700;text-decoration:none}
+
+        header{background:#fff;padding:16px 44px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom:4px solid #0f766e}
+        .logo{display:flex;flex-direction:column;gap:2px}
+        .logo-main{font-size:1.25em;font-weight:900;color:#0f766e;letter-spacing:-.5px}
+        .logo-sub{font-size:.65em;color:#888;font-weight:400}
+        .hd-tel{background:#0f766e;color:#fff;padding:11px 24px;border-radius:8px;text-decoration:none;font-weight:900;font-size:.95em;transition:background .2s}
+        .hd-tel:hover{background:#134e4a}
+
+        /* 히어로 */
+        .hero{background:linear-gradient(150deg,#022c22 0%,#134e4a 45%,#0f766e 75%,#022c22 100%);min-height:100vh;display:flex;align-items:center;padding:100px 20px 80px;position:relative;overflow:hidden}
+        .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(15,118,110,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(15,118,110,.08) 1px,transparent 1px);background-size:55px 55px}
+        .hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(15,118,110,.18),transparent 65%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+
+        /* 트랩 원형 아이콘 플로팅 */
+        .trap-floats{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+        .trap-el{position:absolute;font-size:2em;opacity:.06;animation:tf ease-in-out infinite}
+        @keyframes tf{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(10deg)}}
+
+        /* 파이프 흐름 라인 */
+        .pipe-lines{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+        .pipe-line{position:absolute;height:2px;background:linear-gradient(90deg,transparent,rgba(94,234,212,.1),transparent);animation:pl linear infinite}
+        @keyframes pl{0%{transform:translateX(-100%)}100%{transform:translateX(100vw)}}
+
+        .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;position:relative;z-index:1;width:100%}
+
+        .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(15,118,110,.15);border:1px solid rgba(15,118,110,.35);color:#5eead4;padding:8px 18px;border-radius:50px;font-size:.8em;font-weight:700;margin-bottom:22px}
+        .live-dot{width:7px;height:7px;background:#2dd4bf;border-radius:50%;animation:ld 1.8s infinite;box-shadow:0 0 6px #2dd4bf}
+        @keyframes ld{0%,100%{opacity:1}50%{opacity:.2}}
+
+        .hero h1{font-size:clamp(1.8em,3.3vw,2.8em);font-weight:900;color:#fff;line-height:1.2;letter-spacing:-.5px;margin-bottom:16px}
+        .hero h1 .kw{background:rgba(45,212,191,.15);border:1px solid rgba(45,212,191,.3);padding:2px 10px;border-radius:6px;color:#5eead4}
+        .hero h1 .teal{color:#2dd4bf}
+
+        .hero-seo-txt{font-size:.97em;color:rgba(255,255,255,.65);line-height:1.9;margin-bottom:24px}
+        .hero-seo-txt strong{color:#5eead4}
+
+        .hchecks{display:flex;flex-direction:column;gap:8px;margin-bottom:32px}
+        .hc{display:flex;align-items:center;gap:10px;font-size:.92em;color:rgba(255,255,255,.85)}
+        .hc-dot{width:20px;height:20px;background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72em;color:#2dd4bf;flex-shrink:0}
+
+        .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+        .btn-main{background:#0f766e;color:#fff;padding:16px 38px;border-radius:10px;font-size:1.1em;font-weight:900;text-decoration:none;box-shadow:0 6px 22px rgba(15,118,110,.4);transition:all .2s}
+        .btn-main:hover{background:#134e4a;transform:translateY(-2px)}
+        .btn-sub{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;padding:16px 28px;border-radius:10px;font-size:1em;font-weight:700;text-decoration:none;transition:all .2s}
+
+        .hero-stats{display:flex;gap:14px;flex-wrap:wrap}
+        .hs{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 20px;text-align:center}
+        .hs-n{font-size:1.6em;font-weight:900;color:#2dd4bf;display:block;line-height:1}
+        .hs-l{font-size:.75em;color:rgba(255,255,255,.45);margin-top:4px}
+
+        /* 히어로 우측 — 트랩 종류 카드 */
+        .trap-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:28px;backdrop-filter:blur(12px)}
+        .trap-card-title{font-size:.92em;font-weight:800;color:#5eead4;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.07)}
+        .trap-types{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+        .tt{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.05);border-radius:10px;padding:12px 14px;border:1px solid rgba(255,255,255,.07)}
+        .tt-icon{font-size:1.4em;flex-shrink:0}
+        .tt-info .tt-name{font-size:.88em;font-weight:700;color:#fff;display:block}
+        .tt-info .tt-desc{font-size:.78em;color:rgba(255,255,255,.55)}
+        .tt-badge{margin-left:auto;background:rgba(45,212,191,.2);color:#5eead4;padding:2px 8px;border-radius:4px;font-size:.72em;font-weight:700;white-space:nowrap}
+        .trap-call{background:#0f766e;border-radius:12px;padding:20px;text-align:center}
+        .trap-call p{font-size:.82em;color:rgba(255,255,255,.75);margin-bottom:7px}
+        .trap-call a{font-size:1.4em;font-weight:900;color:#fff;text-decoration:none;display:block}
+
+        /* SEO 섹션 — 트랩 정보 */
+        .seo-sec{background:#f0fdfa;padding:70px 20px;border-bottom:1px solid #99f6e4}
+        .seo-inner{max-width:900px;margin:0 auto}
+        .seo-inner h2{font-size:1.6em;font-weight:900;color:#0f766e;margin-bottom:20px}
+        .seo-inner p{font-size:.97em;color:#444;line-height:1.95;margin-bottom:16px}
+        .seo-inner strong{color:#0f766e;font-weight:700}
+
+        /* 트랩 종류 카드 */
+        .trap-kind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:28px 0}
+        .tk{background:#fff;border-radius:14px;padding:24px 20px;border:1px solid #99f6e4;position:relative;overflow:hidden;transition:all .3s}
+        .tk::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#0f766e,#2dd4bf)}
+        .tk:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,118,110,.1)}
+        .tk-icon{font-size:2em;margin-bottom:12px;display:block}
+        .tk h3{font-size:1em;font-weight:800;color:#0f766e;margin-bottom:8px}
+        .tk p{font-size:.86em;color:#666;line-height:1.7}
+        .tk-where{margin-top:10px;font-size:.8em;font-weight:700;color:#0f766e;background:#f0fdfa;padding:4px 10px;border-radius:4px;display:inline-block}
+
+        .seo-kws{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+        .seo-kw{background:#ccfbf1;border:1px solid#5eead4;color:#0f766e;padding:5px 14px;border-radius:20px;font-size:.82em;font-weight:700}
+
+        /* 마퀴 */
+        .mq{background:#0f766e;padding:12px 0;overflow:hidden}
+        .mq-track{display:flex;animation:mq 22s linear infinite;white-space:nowrap}
+        .mq-i{padding:0 26px;font-size:.84em;color:rgba(255,255,255,.7);font-weight:600;display:flex;align-items:center;gap:8px}
+        .mq-i strong{color:#fff}
+        @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+        .sec{padding:80px 20px}
+        .si{max-width:1050px;margin:0 auto}
+        .ew{font-size:.74em;font-weight:700;color:#0f766e;letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:11px}
+        .sh{font-size:clamp(1.7em,3.5vw,2.4em);font-weight:900;color:#111;margin-bottom:10px;letter-spacing:-.5px}
+        .sh span{color:#0f766e}
+        .sp{color:#888;font-size:.97em;line-height:1.7;margin-bottom:48px}
+
+        /* 서비스 */
+        .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+        .svc-c{background:#fff;border-radius:16px;padding:30px 24px;border:1px solid #e5e7eb;transition:all .3s;position:relative;overflow:hidden}
+        .svc-c::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#0f766e,#2dd4bf);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+        .svc-c:hover::after{transform:scaleX(1)}
+        .svc-c:hover{border-color:#0f766e;transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,118,110,.1)}
+        .svc-no{font-size:.7em;color:#5eead4;font-weight:700;letter-spacing:2px;display:block;margin-bottom:14px}
+        .svc-ico{font-size:2.4em;margin-bottom:14px;display:block;transition:transform .3s}
+        .svc-c:hover .svc-ico{transform:scale(1.1)}
+        .svc-c h3{font-size:1em;font-weight:800;color:#111;margin-bottom:8px}
+        .svc-c p{font-size:.86em;color:#777;line-height:1.7}
+        .svc-tag{display:inline-block;margin-top:12px;background:#f0fdfa;color:#0f766e;padding:3px 11px;border-radius:4px;font-size:.73em;font-weight:700;border:1px solid #5eead4}
+
+        /* 통계 */
+        .stat-sec{background:linear-gradient(135deg,#022c22,#134e4a);padding:55px 20px}
+        .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));max-width:880px;margin:0 auto;text-align:center}
+        .stat-i{padding:20px;border-right:1px solid rgba(255,255,255,.08)}
+        .stat-i:last-child{border-right:none}
+        .stat-n{font-size:2.5em;font-weight:900;color:#2dd4bf;display:block;line-height:1}
+        .stat-l{font-size:.8em;color:rgba(255,255,255,.45);margin-top:5px}
+
+        /* FAQ */
+        .faq-sec{background:#f0fdfa;padding:80px 20px}
+        .faq-inner{max-width:860px;margin:0 auto}
+        .faq-item{background:#fff;border-radius:14px;padding:26px 28px;margin-bottom:16px;border:1px solid #e5e7eb;transition:all .3s}
+        .faq-item:hover{border-color:#0f766e;box-shadow:0 6px 20px rgba(15,118,110,.08)}
+        .faq-q{font-size:1em;font-weight:800;color:#0f766e;margin-bottom:10px;display:flex;align-items:flex-start;gap:10px}
+        .faq-badge{background:#0f766e;color:#fff;padding:2px 9px;border-radius:4px;font-size:.72em;font-weight:700;flex-shrink:0;margin-top:2px}
+        .faq-a{font-size:.92em;color:#555;line-height:1.8;padding-left:44px}
+
+        /* 프로세스 */
+        .proc-wrap{display:flex;max-width:960px;margin:0 auto;position:relative}
+        .proc-wrap::before{content:'';position:absolute;top:32px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,#0f766e,#2dd4bf,#0f766e)}
+        .proc-i{flex:1;text-align:center;padding:0 12px;position:relative;z-index:1}
+        .proc-dot{width:65px;height:65px;background:#fff;border:2px solid #99f6e4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1em;color:#0f766e;transition:all .3s;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+        .proc-i:hover .proc-dot{background:#0f766e;border-color:#0f766e;color:#fff;box-shadow:0 6px 20px rgba(15,118,110,.35)}
+        .proc-i h3{font-size:.93em;font-weight:800;color:#111;margin-bottom:6px}
+        .proc-i p{font-size:.8em;color:#888;line-height:1.6}
+
+        /* 후기 */
+        .rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+        .rv-c{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px;transition:all .3s}
+        .rv-c:hover{border-color:#0f766e;transform:translateY(-4px);box-shadow:0 10px 28px rgba(15,118,110,.1)}
+        .rv-stars{color:#f59e0b;margin-bottom:12px}
+        .rv-txt{font-size:.9em;color:#444;line-height:1.8;margin-bottom:16px}
+        .rv-info{display:flex;align-items:center;gap:10px;font-size:.8em;color:#aaa}
+        .rv-av{width:32px;height:32px;background:linear-gradient(135deg,#0f766e,#2dd4bf);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8em;font-weight:700;color:#fff}
+
+        /* 지역 */
+        .area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#e5e7eb;border-radius:16px;overflow:hidden;max-width:960px;margin:0 auto;border:1px solid #e5e7eb}
+        .area-i{background:#fff;padding:26px 20px;transition:background .2s}
+        .area-i:hover{background:#f0fdfa}
+        .area-i h3{font-size:1.05em;font-weight:900;color:#0f766e;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid #f0f0f0}
+        .area-i p{font-size:.8em;color:#888;line-height:1.9}
+
+        /* CTA */
+        .cta-sec{background:linear-gradient(135deg,#022c22,#134e4a,#022c22);padding:90px 20px;text-align:center;position:relative;overflow:hidden}
+        .cta-sec::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(15,118,110,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(15,118,110,.07) 1px,transparent 1px);background-size:55px 55px}
+        .cta-inner{position:relative;z-index:1}
+        .cta-sec h2{font-size:clamp(1.8em,4vw,3em);font-weight:900;color:#fff;margin-bottom:15px;letter-spacing:-.5px}
+        .cta-sec h2 span{color:#2dd4bf}
+        .cta-sec p{color:rgba(255,255,255,.6);margin-bottom:40px;font-size:1.05em;line-height:1.8}
+        .cta-btn{display:inline-flex;align-items:center;gap:12px;background:#2dd4bf;color:#022c22;padding:22px 58px;border-radius:10px;font-size:1.4em;font-weight:900;text-decoration:none;box-shadow:0 8px 30px rgba(45,212,191,.3);transition:all .2s}
+        .cta-btn:hover{transform:scale(1.04);box-shadow:0 12px 40px rgba(45,212,191,.45)}
+
+        .seo-bottom{background:#fff;padding:60px 20px;border-top:1px solid #e5e7eb}
+        .seo-bottom-inner{max-width:900px;margin:0 auto}
+        .seo-bottom h2{font-size:1.4em;font-weight:900;color:#111;margin-bottom:16px}
+        .seo-bottom p{font-size:.92em;color:#555;line-height:1.95;margin-bottom:14px}
+        .seo-bottom strong{color:#0f766e}
+
+        footer{background:#0a0f1e;padding:30px 20px;text-align:center;color:rgba(255,255,255,.25);font-size:.82em;border-top:1px solid rgba(15,118,110,.15)}
+        footer span{color:#2dd4bf}
+
+        @media(max-width:768px){.hero-inner{grid-template-columns:1fr}.hero-right{display:none}.proc-wrap{flex-direction:column;gap:20px}.proc-wrap::before{display:none}header{padding:14px 18px}}
+        .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+        .fade.on{opacity:1;transform:translateY(0)}
+    </style>
+</head>
+<body>
+
+<div class="mob-cta">
+    <div class="txt">
+        <strong>🔩 배수구트랩설치 전문</strong>
+        <span>24시간 당일설치 · 냄새·역류 완벽 차단</span>
+    </div>
+    <a href="tel:050413628100">📞 지금 전화</a>
+</div>
+<div class="mb-pad"></div>
+
+<div class="top-bar">
+    <span>🟢 <strong>배수구트랩설치</strong> 24시간 당일 가능</span>
+    <span>|</span>
+    <span>서울·인천·경기 <strong>30분</strong> 내 출동</span>
+    <span>|</span>
+    <a href="tel:050413628100">📞 0504-1362-8100</a>
+</div>
+
+<header>
+    <div class="logo">
+        <div class="logo-main">배수구트랩설치</div>
+        <div class="logo-sub">서울·인천·경기 24시간 배관·트랩 전문</div>
+    </div>
+    <a href="tel:050413628100" class="hd-tel">📞 0504-1362-8100</a>
+</header>
+
+<section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="trap-floats" id="trapFloats"></div>
+    <div class="pipe-lines" id="pipeLines"></div>
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-tag"><span class="live-dot"></span> 배수구트랩설치 No.1 전문</div>
+            <h1>
+                <span class="kw">배수구트랩설치</span><br>
+                냄새·역류·해충<br>
+                <span class="teal">완벽 차단</span>합니다
+            </h1>
+            <p class="hero-seo-txt">
+                <strong>배수구트랩설치</strong>로 하수구 냄새 역류를 근본부터 차단하세요.<br>
+                P트랩·U트랩·드럼트랩 등 모든 <strong>배수구트랩설치</strong><br>
+                당일 완료, 추가비용 없는 투명한 서비스를 제공합니다.
+            </p>
+            <div class="hchecks">
+                <div class="hc"><div class="hc-dot">✓</div> 배수구트랩설치 당일 완료</div>
+                <div class="hc"><div class="hc-dot">✓</div> P트랩·U트랩·드럼트랩 전 종류 가능</div>
+                <div class="hc"><div class="hc-dot">✓</div> 설치 전 견적 확정 — 추가비용 없음</div>
+                <div class="hc"><div class="hc-dot">✓</div> 서울·인천·경기 30분 내 긴급출동</div>
+            </div>
+            <div class="hero-btns">
+                <a href="tel:050413628100" class="btn-main">📞 0504-1362-8100 즉시 상담</a>
+                <a href="#service" class="btn-sub">서비스 안내 →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hs"><span class="hs-n">30분</span><div class="hs-l">출동시간</div></div>
+                <div class="hs"><span class="hs-n">당일</span><div class="hs-l">설치완료</div></div>
+                <div class="hs"><span class="hs-n">무료</span><div class="hs-l">현장견적</div></div>
+                <div class="hs"><span class="hs-n">0원</span><div class="hs-l">추가비용</div></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="trap-card">
+                <div class="trap-card-title">🔩 배수구트랩설치 종류</div>
+                <div class="trap-types">
+                    <div class="tt">
+                        <div class="tt-icon">🔄</div>
+                        <div class="tt-info">
+                            <span class="tt-name">P트랩 설치</span>
+                            <span class="tt-desc">싱크대·세면대 배수구 전용</span>
+                        </div>
+                        <span class="tt-badge">가장 인기</span>
+                    </div>
+                    <div class="tt">
+                        <div class="tt-icon">〰️</div>
+                        <div class="tt-info">
+                            <span class="tt-name">U트랩 설치</span>
+                            <span class="tt-desc">바닥 배수구·하수구 전용</span>
+                        </div>
+                        <span class="tt-badge">당일 가능</span>
+                    </div>
+                    <div class="tt">
+                        <div class="tt-icon">🔵</div>
+                        <div class="tt-info">
+                            <span class="tt-name">드럼트랩 설치</span>
+                            <span class="tt-desc">욕실·화장실 바닥 전용</span>
+                        </div>
+                        <span class="tt-badge">즉시 출동</span>
+                    </div>
+                    <div class="tt">
+                        <div class="tt-icon">🔧</div>
+                        <div class="tt-info">
+                            <span class="tt-name">트랩 교체·보수</span>
+                            <span class="tt-desc">파손·노후 트랩 즉시 교체</span>
+                        </div>
+                        <span class="tt-badge">긴급 가능</span>
+                    </div>
+                </div>
+                <div class="trap-call">
+                    <p>배수구트랩설치 즉시 전화!</p>
+                    <a href="tel:050413628100">📞 0504-1362-8100</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="seo-sec">
+    <div class="seo-inner">
+        <h2>배수구트랩설치 — 종류와 효과 완벽 가이드</h2>
+        <p>
+            <strong>배수구트랩설치</strong>는 배수구 냄새 역류, 해충 침입, 하수가스 유입을
+            근본적으로 차단하는 가장 효과적인 방법입니다.
+            <strong>배수구트랩설치</strong>가 없거나 파손된 경우 하수구 냄새가 집 안으로
+            올라오고 해충이 침입할 수 있습니다.
+        </p>
+        <div class="trap-kind-grid">
+            <div class="tk fade">
+                <span class="tk-icon">🔄</span>
+                <h3>P트랩</h3>
+                <p>배관이 P자 모양으로 굽어 물이 항상 고여 냄새를 차단합니다. 가장 일반적인 배수구트랩설치 방식</p>
+                <span class="tk-where">싱크대 · 세면대 · 욕조</span>
+            </div>
+            <div class="tk fade">
+                <span class="tk-icon">〰️</span>
+                <h3>U트랩</h3>
+                <p>U자형 배관에 물이 고여 하수가스를 완벽 차단. 바닥 배수구에 주로 사용하는 배수구트랩설치</p>
+                <span class="tk-where">바닥 배수구 · 하수구</span>
+            </div>
+            <div class="tk fade">
+                <span class="tk-icon">🔵</span>
+                <h3>드럼트랩</h3>
+                <p>원통형 용기에 물이 고이는 구조. 청소구가 있어 유지관리가 쉬운 배수구트랩설치</p>
+                <span class="tk-where">욕실 · 화장실 바닥</span>
+            </div>
+            <div class="tk fade">
+                <span class="tk-icon">🛡️</span>
+                <h3>역류방지트랩</h3>
+                <p>역류 차단 기능이 추가된 프리미엄 배수구트랩설치. 홍수·역류 위험 지역에 적합</p>
+                <span class="tk-where">침수 위험 지역</span>
+            </div>
+        </div>
+        <p>
+            <strong>배수구트랩설치</strong>가 필요한 경우는 하수구 냄새가 올라올 때, 트랩이 파손됐을 때,
+            새로 이사한 집에 트랩이 없을 때입니다. 즉시 <strong>배수구트랩설치</strong> 전문가에게 연락하세요.
+        </p>
+        <div class="seo-kws">
+            <span class="seo-kw">배수구트랩설치</span>
+            <span class="seo-kw">P트랩설치</span>
+            <span class="seo-kw">U트랩설치</span>
+            <span class="seo-kw">드럼트랩설치</span>
+            <span class="seo-kw">트랩교체</span>
+            <span class="seo-kw">배수구냄새차단</span>
+            <span class="seo-kw">역류방지</span>
+            <span class="seo-kw">24시간출동</span>
+        </div>
+    </div>
+</div>
+
+<div class="mq">
+    <div class="mq-track">
+        <div class="mq-i"><strong>배수구트랩설치</strong></div>
+        <div class="mq-i">✦ P트랩설치</div>
+        <div class="mq-i">✦ U트랩설치</div>
+        <div class="mq-i">✦ 드럼트랩설치</div>
+        <div class="mq-i">✦ 냄새차단</div>
+        <div class="mq-i"><strong>배수구트랩설치</strong></div>
+        <div class="mq-i">✦ 트랩교체</div>
+        <div class="mq-i">✦ 역류방지</div>
+        <div class="mq-i">✦ 24시간출동</div>
+        <div class="mq-i">✦ 당일설치</div>
+        <div class="mq-i"><strong>배수구트랩설치</strong></div>
+        <div class="mq-i">✦ P트랩설치</div>
+        <div class="mq-i">✦ U트랩설치</div>
+        <div class="mq-i">✦ 드럼트랩설치</div>
+        <div class="mq-i">✦ 냄새차단</div>
+        <div class="mq-i"><strong>배수구트랩설치</strong></div>
+        <div class="mq-i">✦ 트랩교체</div>
+        <div class="mq-i">✦ 역류방지</div>
+        <div class="mq-i">✦ 24시간출동</div>
+        <div class="mq-i">✦ 당일설치</div>
+    </div>
+</div>
+
+<section class="sec" style="background:#fff" id="service">
+    <div class="si">
+        <span class="ew">SERVICES</span>
+        <h2 class="sh"><span>배수구트랩설치</span> 전문 서비스</h2>
+        <p class="sp">모든 배수구트랩 종류 — 당일 설치·교체 완료</p>
+        <div class="svc-grid">
+            <div class="svc-c fade"><span class="svc-no">01</span><span class="svc-ico">🔄</span><h3>P트랩 설치·교체</h3><p>싱크대·세면대·욕조 배수구트랩설치. 냄새 역류 완벽 차단. 당일 설치</p><span class="svc-tag">가장 인기</span></div>
+            <div class="svc-c fade"><span class="svc-no">02</span><span class="svc-ico">〰️</span><h3>U트랩 설치·교체</h3><p>바닥 배수구 배수구트랩설치. 하수가스 완벽 차단. 즉시 출동 가능</p><span class="svc-tag">당일 완료</span></div>
+            <div class="svc-c fade"><span class="svc-no">03</span><span class="svc-ico">🔵</span><h3>드럼트랩 설치</h3><p>욕실·화장실 바닥 배수구트랩설치. 청소구 포함 설치</p><span class="svc-tag">즉시 출동</span></div>
+            <div class="svc-c fade"><span class="svc-no">04</span><span class="svc-ico">🛡️</span><h3>역류방지트랩 설치</h3><p>침수·역류 위험 지역 전용 배수구트랩설치. 이중 차단</p><span class="svc-tag">고급형</span></div>
+            <div class="svc-c fade"><span class="svc-no">05</span><span class="svc-ico">🔧</span><h3>트랩 파손·보수</h3><p>파손·노후 배수구트랩설치 즉시 교체. 전 트랩 종류 재고 보유</p><span class="svc-tag">긴급 가능</span></div>
+            <div class="svc-c fade"><span class="svc-no">06</span><span class="svc-ico">💧</span><h3>하수구·배관 점검</h3><p>배수구트랩설치 후 배관 전체 상태 점검. 냄새·막힘 동시 해결</p><span class="svc-tag">패키지</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="stat-sec">
+    <div class="stat-grid">
+        <div class="stat-i"><span class="stat-n">30분</span><div class="stat-l">평균 출동시간</div></div>
+        <div class="stat-i"><span class="stat-n">당일</span><div class="stat-l">설치 완료</div></div>
+        <div class="stat-i"><span class="stat-n">무료</span><div class="stat-l">현장 견적</div></div>
+        <div class="stat-i"><span class="stat-n">0원</span><div class="stat-l">추가비용 없음</div></div>
+        <div class="stat-i"><span class="stat-n">24H</span><div class="stat-l">365일 대기</div></div>
+    </div>
+</div>
+
+<section class="faq-sec">
+    <div class="faq-inner">
+        <span class="ew">FAQ</span>
+        <h2 class="sh" style="margin-bottom:35px"><span>배수구트랩설치</span> 자주 묻는 질문</h2>
+        <div class="faq-item fade">
+            <div class="faq-q"><span class="faq-badge">Q</span> 배수구트랩설치 비용이 얼마인가요?</div>
+            <div class="faq-a">배수구트랩설치 비용은 트랩 종류(P트랩·U트랩·드럼트랩)와 설치 위치에 따라 다릅니다. 현장 확인 후 작업 전 정확한 견적을 안내드리며 추가비용은 절대 없습니다.</div>
+        </div>
+        <div class="faq-item fade">
+            <div class="faq-q"><span class="faq-badge">Q</span> 배수구트랩설치 당일 가능한가요?</div>
+            <div class="faq-a">네, 배수구트랩설치 24시간 당일 설치 가능합니다. 서울·인천·경기 전 지역 30분 내 출동하며 대부분 당일 완료합니다.</div>
+        </div>
+        <div class="faq-item fade">
+            <div class="faq-q"><span class="faq-badge">Q</span> 배수구트랩설치 왜 필요한가요?</div>
+            <div class="faq-a">배수구트랩설치는 하수구 냄새 역류 차단, 해충 침입 방지, 하수가스 유입 차단 효과가 있습니다. 트랩이 없거나 파손된 경우 즉시 배수구트랩설치가 필요합니다.</div>
+        </div>
+        <div class="faq-item fade">
+            <div class="faq-q"><span class="faq-badge">Q</span> P트랩과 U트랩 차이가 뭔가요?</div>
+            <div class="faq-a">P트랩은 싱크대·세면대 등 벽 배수에 사용하고, U트랩은 바닥 배수구에 주로 사용합니다. 배수구트랩설치 전문가가 현장 확인 후 최적 트랩을 추천해드립니다.</div>
+        </div>
+        <div class="faq-item fade">
+            <div class="faq-q"><span class="faq-badge">Q</span> 배수구트랩설치 후 냄새가 없어지나요?</div>
+            <div class="faq-a">네, 배수구트랩설치 후 하수구 냄새가 즉시 차단됩니다. 단, 배관 내부 슬러지가 원인인 경우 고압세척도 함께 진행하면 완벽하게 해결됩니다.</div>
+        </div>
+    </div>
+</section>
+
+<section class="sec" style="background:#fff">
+    <div class="si" style="text-align:center">
+        <span class="ew">PROCESS</span>
+        <h2 class="sh"><span>배수구트랩설치</span> 프로세스</h2>
+        <p class="sp">전화 한 통 — 4단계 당일 완료</p>
+        <div class="proc-wrap">
+            <div class="proc-i fade"><div class="proc-dot">📞</div><h3>전화 접수</h3><p>배수구트랩설치 위치·종류 상담</p></div>
+            <div class="proc-i fade"><div class="proc-dot">🚗</div><h3>30분 출동</h3><p>트랩 자재 지참 즉시 출동</p></div>
+            <div class="proc-i fade"><div class="proc-dot">🔍</div><h3>현장 확인</h3><p>배수구 상태·트랩 종류 결정</p></div>
+            <div class="proc-i fade"><div class="proc-dot">🔩</div><h3>당일 설치</h3><p>배수구트랩설치 완료·누수 확인</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="sec" style="background:#f0fdfa">
+    <div class="si">
+        <span class="ew">REVIEWS</span>
+        <h2 class="sh"><span>배수구트랩설치</span> 고객 후기</h2>
+        <div class="rv-grid">
+            <div class="rv-c fade">
+                <div class="rv-stars">★★★★★</div>
+                <p class="rv-txt">이사 후 화장실에서 냄새가 심해서 배수구트랩설치 연락드렸는데 30분 만에 오셔서 P트랩 당일 설치해 주셨어요. 냄새가 완전히 없어졌습니다!</p>
+                <div class="rv-info"><div class="rv-av">김</div><div>강남구 · P트랩 설치</div></div>
+            </div>
+            <div class="rv-c fade">
+                <div class="rv-stars">★★★★★</div>
+                <p class="rv-txt">바닥 배수구에서 냄새가 계속 올라와 배수구트랩설치 맡겼는데 U트랩 설치 후 바로 해결됐어요. 견적도 미리 알려주시고 추가비용도 없었습니다!</p>
+                <div class="rv-info"><div class="rv-av">이</div><div>마포구 · U트랩 설치</div></div>
+            </div>
+            <div class="rv-c fade">
+                <div class="rv-stars">★★★★★</div>
+                <p class="rv-txt">욕실 드럼트랩이 파손돼서 배수구트랩설치 급하게 연락했는데 당일 교체해 주셨어요. 빠르고 깔끔한 서비스에 매우 만족합니다!</p>
+                <div class="rv-info"><div class="rv-av">박</div><div>송파구 · 드럼트랩 교체</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sec" style="background:#fff">
+    <div class="si" style="text-align:center">
+        <span class="ew">SERVICE AREA</span>
+        <h2 class="sh"><span>배수구트랩설치</span> 출동 지역</h2>
+        <p class="sp">서울·인천·경기 전 지역 + 전국 출동 가능</p>
+        <div class="area-grid">
+            <div class="area-i fade"><h3>서울</h3><p>강남 서초 송파 강동 강서 마포 종로 중구 용산 성동 광진 동대문 성북 강북 노원 은평 양천 구로 영등포 동작 관악</p></div>
+            <div class="area-i fade"><h3>경기</h3><p>수원 성남 분당 용인 안양 부천 광명 평택 안산 고양 일산 의정부 파주 김포 하남 남양주 구리 광주 이천 양평</p></div>
+            <div class="area-i fade"><h3>인천</h3><p>중구 동구 미추홀 연수 남동 부평 계양 서구 강화 송도 청라 검단</p></div>
+            <div class="area-i fade"><h3>전국</h3><p>위 지역 외 전국 어디든 출동 가능합니다. 전화 주시면 확인 후 안내드립니다.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-sec">
+    <div class="cta-inner">
+        <h2><span>배수구트랩설치</span><br>지금 바로 연락하세요</h2>
+        <p>하수구 냄새·역류·해충 완벽 차단<br>30분 내 출동 · 무료 현장 견적 · 당일 완료</p>
+        <a href="tel:050413628100" class="cta-btn">📞 0504-1362-8100 배수구트랩설치</a>
+        <p style="margin-top:20px;font-size:.88em;color:rgba(255,255,255,.35)">24시간 365일 · 서울 인천 경기 전국 · 추가비용 없음</p>
+    </div>
+</section>
+
+<div class="seo-bottom">
+    <div class="seo-bottom-inner">
+        <h2>배수구트랩설치 완벽 가이드</h2>
+        <p>
+            <strong>배수구트랩설치</strong>는 하수구 냄새 차단, 해충 침입 방지, 역류 방지를 위한
+            필수 시공입니다. P트랩·U트랩·드럼트랩 등 다양한 종류의 <strong>배수구트랩설치</strong>가
+            있으며, 설치 위치와 용도에 따라 최적 트랩을 선택해야 합니다.
+        </p>
+        <p>
+            <strong>배수구트랩설치</strong>가 필요한 경우는 신축·이사 후 트랩이 없는 경우,
+            기존 트랩이 파손된 경우, 하수구 냄새가 집 안으로 올라오는 경우입니다.
+            <strong>배수구트랩설치</strong> 전문가가 현장 확인 후 당일 완료합니다.
+        </p>
+        <p>
+            <strong>배수구트랩설치</strong>가 필요하시다면 지금 바로 0504-1362-8100으로 연락주세요.
+            무료 현장 견적, 추가비용 없음, 30분 내 출동하는
+            <strong>배수구트랩설치</strong> 전문팀이 당일 해결해드립니다.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>배수구트랩설치 전문 · 서울 인천 경기 전국 배관전문</p>
+    <p style="margin-top:8px">24시간 긴급출동: <span>0504-1362-8100</span></p>
+</footer>
+
+<script>
+const tf = document.getElementById('trapFloats')
+const icons = ['🔩','💧','🔧','〰️','🔄']
+for(let i=0;i<8;i++){
+    const el = document.createElement('div')
+    el.className = 'trap-el'
+    el.textContent = icons[i%icons.length]
+    el.style.cssText=`left:${5+Math.random()*88}%;top:${5+Math.random()*88}%;animation-duration:${5+Math.random()*7}s;animation-delay:${Math.random()*4}s;`
+    tf.appendChild(el)
+}
+const pl = document.getElementById('pipeLines')
+for(let i=0;i<5;i++){
+    const l = document.createElement('div')
+    l.className = 'pipe-line'
+    l.style.cssText=`top:${15+i*18}%;width:${200+Math.random()*300}px;animation-duration:${6+Math.random()*8}s;animation-delay:${Math.random()*5}s;`
+    pl.appendChild(l)
+}
+const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('on')})
+},{threshold:0.1})
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el))
+</script>
+</body>
+</html>
